@@ -1,0 +1,109 @@
+html{
+    height: 100%;
+    width:100%;
+    font-family: 'Ubuntu',sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #e0e0e0;
+}
+.main{
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+header{
+    width:100%;
+    height: 60px;
+    background-color: rosybrown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;
+    z-index:1;
+}
+header img{
+    width: 60px;
+    height:60px;
+    margin-left:1%;
+}
+header>button{
+    margin-right: 2%;
+}
+.content{
+    margin-top: 60px;
+    width:100%;
+    padding-bottom:60px;
+}
+footer{
+    width: 100%;
+    background-color: rosybrown;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+}
+footer img{
+    width:22px;
+    height: 20px;
+}
+.contact{
+    padding:12px;
+    margin-right: 2%;
+}
+.socialMedia{
+    padding:12px;
+    margin-right: 2%;
+}
+.copyright{
+    font-size:0.75em;
+}
+.btn-light{
+    margin-right:20px;
+}
+.modal-body input{
+    border:1px solid gray;
+    border-radius: 3px;
+}
+.form-group>div{
+    display: flex;
+    margin: 5%;
+}
+.form-group>div>label{
+    flex: 30%;
+}
+.form-group>div>input{
+    flex: 70%;
+}
+#loader{
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    100%{
+        transform:rotate(360deg)
+    }
+}
+.center{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin:auto;
+}

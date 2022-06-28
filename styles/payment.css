@@ -1,0 +1,66 @@
+.content{
+    margin:100px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.top{
+    width:50%;
+    height:270px;
+    background-color: rgb(132,136,139);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.details{
+    padding-left: 2%;
+}
+.bottom{
+    background-color: rosybrown;
+    margin:2%;
+    border:1px solid black;
+    border-radius:5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.bottom>div{
+    padding-top:1%;
+    margin:0 2%;
+}
+b{
+    font-family: cursive;
+}
+@media(max-width:768px){
+    .top{
+        width: 80%;
+    }
+
+}
+@media(max-width:576px){
+    .top{
+        height:auto;
+        width:100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image img{
+        width: 100%;
+    }
+    .bottom{
+        flex-wrap: wrap;
+ }
+ .bottom>div{
+    flex-basis: 100%;
+ }
+ .customer{
+    padding-top:2%;
+ }
+ .payNow{
+    padding-bottom:2%
+ }
+}
