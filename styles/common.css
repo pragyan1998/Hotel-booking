@@ -1,109 +1,78 @@
-html{
-    height: 100%;
-    width:100%;
-    font-family: 'Ubuntu',sans-serif;
+* {
+  font-family: 'Ubuntu', sans-serif;
 }
-body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-color: #e0e0e0;
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #e0e0e0;  
 }
-.main{
-    width: 100%;
-    height: 100%;
+a {
+  color: black !important;
 }
-a{
-    text-decoration: none;
-    color:black;
+.main-container {
+  width: 100%;
+  height: 100%;
 }
-a:hover{
-    text-decoration: none;
-    color: black;
+#logo-image {
+  height: 100%;
+  width: 60px;
 }
-header{
-    width:100%;
-    height: 60px;
-    background-color: rosybrown;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top:0;
-    z-index:1;
+.logo {
+  margin-left: 1%;
 }
-header img{
-    width: 60px;
-    height:60px;
-    margin-left:1%;
+.social-media-image {
+  height: 20px;
+  width: 22px;
 }
-header>button{
-    margin-right: 2%;
+.header-footer {
+  background-color:rosybrown;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.content{
-    margin-top: 60px;
-    width:100%;
-    padding-bottom:60px;
+header {
+  top: 0;  
 }
-footer{
-    width: 100%;
-    background-color: rosybrown;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items:center ;
+footer {
+  padding:0.7%;
+  bottom: 0;
 }
-footer img{
-    width:22px;
-    height: 20px;
+#login {
+  margin-right: 2%;
 }
-.contact{
-    padding:12px;
-    margin-right: 2%;
+#contact {
+  margin-left: 2%;
 }
-.socialMedia{
-    padding:12px;
-    margin-right: 2%;
+#social-media-images {
+  margin-right: 2%;
 }
-.copyright{
-    font-size:0.75em;
+#copyright-text {
+  font-size: 10px;
 }
-.btn-light{
-    margin-right:20px;
+.hotel-name-rating {
+  padding: 3% 3% !important;
 }
-.modal-body input{
-    border:1px solid gray;
-    border-radius: 3px;
+.heading {
+  font-family: cursive !important;
+  margin-top: 1%;
 }
-.form-group>div{
-    display: flex;
-    margin: 5%;
+#login-form {
+  display: flex;
+  flex-direction: column;
 }
-.form-group>div>label{
-    flex: 30%;
+.login-field {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2%;
 }
-.form-group>div>input{
-    flex: 70%;
+#login-button {
+  margin: auto;
 }
-#loader{
-    border: 12px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 12px solid #444444;
-    width: 70px;
-    height: 70px;
-    animation: spin 1s linear infinite;
-}
-@keyframes spin {
-    100%{
-        transform:rotate(360deg)
-    }
-}
-.center{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin:auto;
+.checked {
+  color: orange;
 }

@@ -1,87 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/common/css">
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/list.css">
 </head>
+
 <body>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Please Login</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        </div>
-        <div class="modal-body">
-            <form class="form-group">
-                <div>
-                <label>Username:</label>
-                <input id="Username" type="email" placeholder="Enter Username">
+    <div id="loader"></div>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header-footer" id="header"></header>
+
+        <!-- Content -->
+
+        <div id="list-container">
+
+            <ul class="nav nav-pills" id="pills-tab">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#list-view">List View</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#map-view">Map View</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tab-content">
+                <div id="list-view" class="tab-pane fade show active">
+                    <div id="hotel-list"></div>
+                </div>
+                <div id="map-view" class="tab-pane fade">
+                    <div id="map"></div>
+                </div>
             </div>
-            <div>
-                <label>Password:</label>
-                <input id="Password" type="password" placeholder="Enter Password">
-            </div>
-        </form>
         </div>
-        <div class="modal-footer" style="margin:auto">
-          <button type="button-login" class="btn btn-primary">Login</button>
-        </div>
-      </div>
+
+        <!-- Footer -->
+        <footer class="header-footer" id="footer"></footer>
     </div>
-  </div>
-    <!-- Button trigger modal -->
 
-<!-- Modal -->
-<div class="modal" id="contactUs" tabindex="-1"role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Get In Touch</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-      <p>
-        Thank you for reaching out !!!<br/>
-          Please enter your email and we will get back to you<br/>
-      </p>
-      <label>Email:<input type="email"name=""value=""placeholder="Enter your Email id"></label>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
-    <div id="loader"class=center></div>
-    <div class="main">
-      <div class="content">
-        <ul>
-          <li><button type="button" class="btn btn-primary">List View</button></li>
-          <li>Map View</li>
-        </ul>
-        <div id="list-View">
-
-      </div>
-      <div id="map-View">
-
-      </div>
-      </div>
-      </div>
-      <script type="text/javascript"src="scripts/common.js"></script>
-      <script type="text/javascript"src="scripts/list.js"></script>
-      
+    <script src="scripts/common.js"></script>
+    <script src="scripts/list.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8FJi2uxHMe_w9gL3wFlhfABQZ1dLhdk4"></script>
 </body>
+
 </html>

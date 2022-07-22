@@ -1,66 +1,84 @@
-#list-view{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#list-view img{
+
+.hotel-image-small {
+    height: 200px;
     width: 250px;
-    height: 250px;
 }
-#list-view>div{
-    margin: 4%;
-    background-color: lightgray;
-    flex-basis: 40%;
+.hotel{
+    margin: 4% 5% 0% 5%; 
+    background-color: lightgrey;
+    width: 40%;
+    float: left;
     display: flex;
-    flex-direction: row;
+    justify-content: start;
+    align-content: center;
+    max-height: 200px;
 }
-#list-view>div:hover{
+.hotel:hover {
     background-color: rosybrown;
 }
-#map-view{
-    display: none;
-    width: 90%;
-    height: 600px;
-    margin: auto;
+#list-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 6%;
 }
-ul{
-    margin-top: 80px;
-    list-style-type: none;
-    text-decoration: none;
+#list-map {
+    position: relative;
+    top: 0%;
+}
+#select-list {
+    position: absolute;
+    left: 42%;
     font-weight: bold;
-    text-align: center;
 }
-li{
-    display: inline;
-    margin: 0 20px;
+#select-map {
+    position: absolute;
+    left: 50%;
+    font-weight: bold;
 }
-.details{
-    padding-left: 2%;
-    padding-top: 2%;
+#pills-tab {
+    justify-content: center;
 }
-.checked{
-    color:orange;
+#map {
+    height: 82vh;
+    margin-top: 2%;
 }
-h6~a:hover{
-text-decoration: underline;
-}
-@media(max-width:768px){
-    #list-view>div{
-        flex:100px;
+
+@media screen and (max-width: 576px) {  
+    #list-container {
+        margin-bottom: 150%;
     }
-}
-@media(max-width:576px){
-    .image{
-        flex:100%;
+
+    #pills-tab {
+        padding-top: 15%;
     }
-    #list-view img{
+
+    .hotel{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .hotel-image-small {
         width: 100%;
     }
-    #list-view div{
-        flex-wrap:wrap;
-    }
-    .details{
-        flex:100%;
+
+    #map-view > img {
+        width: 100%;
     }
 }
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #pills-tab {
+        padding-top: 5%;
+    }
+    
+    .hotel{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #map-view > img {
+        width: 100%;
+    }
+}
+
