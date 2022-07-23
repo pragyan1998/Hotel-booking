@@ -28,29 +28,29 @@ let initMap = locations => {
 }
 
 let initList = hotelList => {
-    let hotelListElement = document.getElementById('hotel-list');
+    let hotelListEle = document.getElementById('hotel-list');
     hotelList.forEach(hotel => {
         let hotelLinkElement = document.createElement("a");
         hotelLinkElement.setAttribute("href", `detail.html?id=` + hotel.result_object.location_id);
-        hotelListElement.appendChild(hotelLinkElement);
-        let hotelContainer = document.createElement("div");
-        hotelContainer.setAttribute("class", "hotel");
-        hotelLinkElement.appendChild(hotelContainer);
+        hotelListEle.appendChild(hotelLinkElement);
+        let hotelContain = document.createElement("div");
+        hotelContain.setAttribute("class", "hotel");
+        hotelLinkElement.appendChild(hotelContain);
         let hotelImage = "<img src=" + hotel.result_object.photo.images.medium.url + " alt='" + hotel.result_object.name + "' class='hotel-image-small'/>";
-        hotelContainer.innerHTML = hotelImage;
-        let hotelDetailsContainer = document.createElement("div");
-        hotelDetailsContainer.setAttribute("class", "hotel-name-rating");
-        hotelContainer.appendChild(hotelDetailsContainer);
+        hotelContain.innerHTML = hotelImage;
+        let hotelDetailContain = document.createElement("div");
+        hotelDetailContain.setAttribute("class", "hotel-name-rating");
+        hotelContain.appendChild(hotelDetailContain);
         let hotelName = hotel.result_object.name;
         if (hotelName.split(' ').length > 3) {
-            hotelDetailsContainer.innerHTML = "<h4>" + hotel.result_object.name + "</h4>";
-            hotelDetailsContainer.innerHTML += "<div id='rating'>" + hotel.result_object.rating + " <span class='fa fa-star checked'></span></div>";
-            hotelDetailsContainer.innerHTML += "<p style='font-size: small'>" + hotel.result_object.address + "</p>";
+            hotelDetailContain.innerHTML = "<h4>" + hotel.result_object.name + "</h4>";
+            hotelDetailContain.innerHTML += "<div id='rating'>" + hotel.result_object.rating + " <span class='fa fa-star checked'></span></div>";
+            hotelDetailContain.innerHTML += "<p style='font-size: small'>" + hotel.result_object.address + "</p>";
         }
         else {
-            hotelDetailsContainer.innerHTML = "<h3>" + hotel.result_object.name + "</h3>";
-            hotelDetailsContainer.innerHTML += "<div id='rating'>" + hotel.result_object.rating + " <span class='fa fa-star checked'></span></div>";
-            hotelDetailsContainer.innerHTML += "<p>" + hotel.result_object.address + "</p>";
+            hotelDetailContain.innerHTML = "<h3>" + hotel.result_object.name + "</h3>";
+            hotelDetailContain.innerHTML += "<div id='rating'>" + hotel.result_object.rating + " <span class='fa fa-star checked'></span></div>";
+            hotelDetailContain.innerHTML += "<p>" + hotel.result_object.address + "</p>";
         }
     });
 }

@@ -32,11 +32,11 @@ let fetchHotelDetailAPI = () => {
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
 
-            let result = JSON.parse(this.responseText).data[0];
+            let resultOf = JSON.parse(this.responseText).data[0];
 
-            document.getElementById("hotel-name").innerText = result.name;
+            document.getElementById("hotel-name").innerText = resultOf.name;
 
-            let amenities = result.amenities;
+            let amenities = resultOf.amenities;
             let i = 0;
             for (; i < Math.min(amenities.length, 10); i++) {
                 let liElement = document.createElement("li");
@@ -44,11 +44,11 @@ let fetchHotelDetailAPI = () => {
                 document.getElementById("amenities").appendChild(liElement);
             }
 
-            let descriptionPara = document.createElement("h6");
-            descriptionPara.innerHTML = result.description;
-            document.getElementById("description").appendChild(descriptionPara);
+            let descriptionPar = document.createElement("h6");
+            descriptionPar.innerHTML = resultOf.description;
+            document.getElementById("description").appendChild(descriptionPar);
 
-            let rating = parseInt(result.rating);
+            let rating = parseInt(resultOf.rating);
             for (i = 1; i <= rating; i++) {
                 document.getElementById(i).classList.add("checked");
             }

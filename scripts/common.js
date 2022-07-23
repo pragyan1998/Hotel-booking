@@ -115,12 +115,12 @@ let login = e => {
   localStorage.setItem('isLogin', 'false');
 
   e.preventDefault();
-  let userElement = document.getElementById('username');
-  let passwordElement = document.getElementById('password');
+  let userElement12 = document.getElementById('username');
+  let passwordEle = document.getElementById('password');
 
   if (
-      userElement.value === localStorage.getItem('username') &&
-      passwordElement.value === localStorage.getItem('password')
+      userElement12.value === localStorage.getItem('username') &&
+      passwordEle.value === localStorage.getItem('password')
   ) {
       localStorage.setItem('isLogin', 'true');
       alert('Successfully logged in!');
@@ -131,8 +131,8 @@ let login = e => {
   } else {
       alert('Incorrect credentials! Login failed!');
 
-      userElement.value = '';
-      passwordElement.value = '';
+      userElement12.value = '';
+      passwordEle.value = '';
   }
 };
 

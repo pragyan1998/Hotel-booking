@@ -20,16 +20,16 @@ let viewMore = () => {
 let debounce = (func, wait, immediate) => {
     let timeout;
     return function executedFunction() {
-        let context = this;
+        let contextOf = this;
         let args = arguments;
         let later = () => {
             timeout = null;
-            if (!immediate) func.apply(context, args);
+            if (!immediate) func.apply(contextOf, args);
         };
         let callNow = immediate && !timeout;
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
+        if (callNow) func.apply(contextOf, args);
     };
 };
 
@@ -39,10 +39,10 @@ let search = () => {
 
     searchInputElement.addEventListener("input", debounce(function (e) {
 
-        let newValue = this.value;
+        let newVal = this.value;
 
         let xhr = new XMLHttpRequest();
-        if (!newValue || newValue.length < 3) {
+        if (!newVal || newVal.length < 3) {
             closeAllLists();
             return false;
         }
@@ -69,7 +69,7 @@ let search = () => {
 
                 for (let i = 0; i < loactionList.length; i++) {
 
-                    if ((loactionList[i].toUpperCase()).includes(newValue.toUpperCase())) {
+                    if ((loactionList[i].toUpperCase()).includes(newVal.toUpperCase())) {
 
                         let listElementDiv = document.createElement("div");
                         listElementDiv.setAttribute("onClick", "window.location='list.html?city=" + loactionList[i] + "'");
@@ -89,7 +89,7 @@ let search = () => {
             }
         });
 
-        xhr.open("GET", API_URL + "locations/auto-complete?lang=en_US&units=km&query=" + newValue);
+        xhr.open("GET", API_URL + "locations/auto-complete?lang=en_US&units=km&query=" + newVal);
         xhr.setRequestHeader("x-rapidapi-host", travelAdvisorHost);
         xhr.setRequestHeader("x-rapidapi-key", travelAdvisorKey);
 
