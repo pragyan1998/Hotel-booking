@@ -40,10 +40,7 @@
 #pills-tab {
     justify-content: center;
 }
-#map {
-    height: 82vh;
-    margin-top: 2%;
-}
+
 
 @media screen and (max-width: 576px) {  
     #list-container {
@@ -76,9 +73,6 @@
         width: 90%;
         flex-direction: column;
     }
-
-    #map-view > img {
-        width: 100%;
-    }
 }
+
 

@@ -50,28 +50,31 @@
                                 oninput="updatePrice()" required />
                         </div>
 
+                        
+                        <div class="outer">
+                            <label for="price">Total:</label>
+                            <input class="inner" type="text" name="price" id="price" readonly />
+                            <input class="inner" type="hidden" id="id" name="id">
+                        </div>
+
                         <div class="outer">
                             <label for="name">Name:</label>
                             <input class="inner" type="text" name="name" id="name" required />
                         </div>
 
-                        <div class="outer">
-                            <label for="fromDate">From Date:</label>
-                            <input class="inner" type="date" name="fromDate" id="fromDate" oninput="updatePrice()"
-                                required />
-                        </div>
+                       
 
                         <div class="outer">
                             <label for="toDate">To Date:</label>
                             <input class="inner" type="date" name="toDate" id="toDate" oninput="updatePrice()"
                                 required />
                         </div>
-
                         <div class="outer">
-                            <label for="price">Total:</label>
-                            <input class="inner" type="text" name="price" id="price" readonly />
-                            <input class="inner" type="hidden" id="id" name="id">
+                            <label for="fromDate">From Date:</label>
+                            <input class="inner" type="date" name="fromDate" id="fromDate" oninput="updatePrice()"
+                                required />
                         </div>
+                        
 
                         <div>
                             <input type="submit" class="btn btn-outline-success" value="Book Now" id="book-now" />

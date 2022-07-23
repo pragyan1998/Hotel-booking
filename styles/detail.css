@@ -4,12 +4,6 @@
   border: 1px solid black;
   max-height: 400px;
 }
-#slideshow-container {
-  margin-left: 2%;
-  border-right: none;
-  flex-grow: 3;
-  max-width: 60%;
-}
 #booking-form {
   margin-right: 2%;
   flex-grow: 1;
@@ -76,10 +70,7 @@ color: black;
       border-right: 1px solid black;
   }
 
-  #booking-form {
-      width: 100%;
-  }
-
+  
   #detail-container {
       margin-top: 20%;
       margin-bottom: 22%;
